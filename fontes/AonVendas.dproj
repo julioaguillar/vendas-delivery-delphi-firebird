@@ -1,0 +1,362 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{15B18E39-E65E-4FF1-A1CA-BA4AEB5B6B2E}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>AonVendas.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UnitSearchPath>C:\Aon\Vendas\repositorio\Common;C:\Aon\Vendas\repositorio\Common\DirectX;C:\Aon\Vendas\process;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ExeOutput>..\</DCC_ExeOutput>
+			<DCC_DependencyCheckOutputName>..\AonVendas.exe</DCC_DependencyCheckOutputName>
+			<DCC_BplOutput>..\dcu\</DCC_BplOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DcpOutput>..\dcu\</DCC_DcpOutput>
+			<DCC_DcuOutput>..\dcu\</DCC_DcuOutput>
+			<DCC_UsePackage>vclx;vcl;vclimg;dbrtl;Rave77VCL;bdertl;rtl;vclactnband;vcldb;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;inetdb;webdsnap;websnap;inetdbbde;inetdbxpress;soaprtl;vclribbon;DbxCommonDriver;DbxClientDriver;DBXInterBaseDriver;DBXMySQLDriver;dbexpress;dbxcds;IBO40FTS_D2010;IBO40VRT_D2010;IBO40TRT_D2010;IBO40CRT_D2010;IBO40RPL_D2010;IBO40ART_D2010;IBO40FRT_D2010;IBO40XRT_D2010;IBO40WRT_D2010;IBO40WXDT_D2010;IBO40WXRT_D2010;IBO40WSRT_D2010;IBOAdmin2010;Package1;tdbf_d2010r;tdbf_d2010d;JclDeveloperTools;Jcl;JclVcl;JclContainers;JvCore;JvSystem;JvStdCtrls;JvAppFrm;JvBands;JvDB;JvDlgs;JvBDE;JvControls;JvCmp;JvCrypt;JvCustom;JvDocking;JvDotNetCtrls;JvGlobus;JvHMI;JvJans;JvManagedThreads;JvMM;JvNet;JvPageComps;JvPascalInterpreter;JvPluginSystem;JvPrintPreview;JvRuntimeDesign;JvTimeFramework;JvWizards;JvXPCtrls;SFIComponentes;ZMstr190D10;fs14;frx14;fsDB14;frxDB14;fsBDE14;frxBDE14;fsADO14;frxADO14;fsIBX14;frxIBX14;frxDBX14;frxe14;fsTee14;frxTee14;DelPrint2010</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="AonVendas.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="uPadrao.pas">
+				<Form>frmPadrao</Form>
+			</DCCReference>
+			<DCCReference Include="uCadPadrao.pas">
+				<Form>frmCadPadrao</Form>
+			</DCCReference>
+			<DCCReference Include="uConsPadrao.pas">
+				<Form>frmConsPadrao</Form>
+			</DCCReference>
+			<DCCReference Include="uPrincipal.pas">
+				<Form>frmPrincipal</Form>
+			</DCCReference>
+			<DCCReference Include="udmPrincipal.pas">
+				<Form>dmPrincipal</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="uSplashScreen.pas">
+				<Form>frmSpleshScreen</Form>
+			</DCCReference>
+			<DCCReference Include="uFuncoes.pas"/>
+			<DCCReference Include="uConfigurarServidor.pas">
+				<Form>frmConfigurarServidor</Form>
+			</DCCReference>
+			<DCCReference Include="uCadUsuario.pas">
+				<Form>frmCadUsuario</Form>
+			</DCCReference>
+			<DCCReference Include="uCampoObrigatorio.pas">
+				<Form>frmCampoObrigatorio</Form>
+			</DCCReference>
+			<DCCReference Include="uLogin.pas">
+				<Form>frmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="uConstantes.pas"/>
+			<DCCReference Include="uCadCliente.pas">
+				<Form>frmCadCliente</Form>
+			</DCCReference>
+			<DCCReference Include="uCadVendedor.pas">
+				<Form>frmCadVendedor</Form>
+			</DCCReference>
+			<DCCReference Include="uCadProduto.pas">
+				<Form>frmCadProduto</Form>
+			</DCCReference>
+			<DCCReference Include="uSobre.pas">
+				<Form>frmSobre</Form>
+			</DCCReference>
+			<DCCReference Include="uCadEmpresa.pas">
+				<Form>frmCadEmpresa</Form>
+			</DCCReference>
+			<DCCReference Include="uCalendario.pas">
+				<Form>frmCalendario</Form>
+			</DCCReference>
+			<DCCReference Include="uAgendaTelefone.pas">
+				<Form>frmAgendaTelefone</Form>
+			</DCCReference>
+			<DCCReference Include="uCadAgendaTelefone.pas">
+				<Form>frmCadAgendaTelefone</Form>
+			</DCCReference>
+			<DCCReference Include="uFluxoCaixa.pas">
+				<Form>frmFluxoCaixa</Form>
+			</DCCReference>
+			<DCCReference Include="uCopiaSeguranca.pas">
+				<Form>frmCopiaSeguranca</Form>
+			</DCCReference>
+			<DCCReference Include="uScript.pas"/>
+			<DCCReference Include="uExecucaoScript.pas">
+				<Form>frmExecucaoScript</Form>
+			</DCCReference>
+			<DCCReference Include="uCadSerial.pas">
+				<Form>frmCadSerial</Form>
+			</DCCReference>
+			<DCCReference Include="uImpAniversariantes.pas">
+				<Form>frmImpAniversariantes</Form>
+			</DCCReference>
+			<DCCReference Include="uImpFluxoCaixa.pas">
+				<Form>frmImpFluxoCaixa</Form>
+			</DCCReference>
+			<DCCReference Include="uCadFeriado.pas">
+				<Form>frmCadFeriado</Form>
+			</DCCReference>
+			<DCCReference Include="uSplashConexao.pas">
+				<Form>frmSplashConexao</Form>
+			</DCCReference>
+			<DCCReference Include="uThreadStatusSerial.pas"/>
+			<DCCReference Include="uCadFotoCliente.pas">
+				<Form>frmCadFotoCliente</Form>
+			</DCCReference>
+			<DCCReference Include="uAtualizacaoBanco.pas">
+				<Form>frmAtualizacaoBanco</Form>
+			</DCCReference>
+			<DCCReference Include="uOpcoesPadrao.pas">
+				<Form>frmOpcoesPadrao</Form>
+			</DCCReference>
+			<DCCReference Include="uCadEnderecoCEP.pas">
+				<Form>frmCadEnderecoCEP</Form>
+			</DCCReference>
+			<DCCReference Include="uMsgErrosPadrao.pas">
+				<Form>frmMsgErrosPadrao</Form>
+			</DCCReference>
+			<DCCReference Include="uMsgErrosMensalidade.pas">
+				<Form>frmMsgErrosMensalidade</Form>
+			</DCCReference>
+			<DCCReference Include="uVisualizaClientes.pas">
+				<Form>frmVisualizaClientes</Form>
+			</DCCReference>
+			<DCCReference Include="uCadCategoriaProduto.pas">
+				<Form>frmCadCategoriaProduto</Form>
+			</DCCReference>
+			<DCCReference Include="uCadFornecedor.pas">
+				<Form>frmCadFornecedor</Form>
+			</DCCReference>
+			<DCCReference Include="uCadUnidademedida.pas">
+				<Form>frmCadUnidademedida</Form>
+			</DCCReference>
+			<DCCReference Include="uLctEntrada.pas">
+				<Form>frmLctEntrada</Form>
+			</DCCReference>
+			<DCCReference Include="uLctEntradaDetalhe.pas">
+				<Form>frmLctEntradaDetalhe</Form>
+			</DCCReference>
+			<DCCReference Include="uCadProdutoEntrada.pas">
+				<Form>frmCadProdutoEntrada</Form>
+			</DCCReference>
+			<DCCReference Include="uLctVenda.pas">
+				<Form>frmLctVenda</Form>
+			</DCCReference>
+			<DCCReference Include="uConsProdutoGrade.pas">
+				<Form>frmConsProdutoGrade</Form>
+			</DCCReference>
+			<DCCReference Include="uAcrescimo.pas">
+				<Form>frmAcrescimo</Form>
+			</DCCReference>
+			<DCCReference Include="uDesconto.pas">
+				<Form>frmDesconto</Form>
+			</DCCReference>
+			<DCCReference Include="uFinalizarVenda.pas">
+				<Form>frmFinalizarVenda</Form>
+			</DCCReference>
+			<DCCReference Include="uQuantidade.pas">
+				<Form>frmQuantidade</Form>
+			</DCCReference>
+			<DCCReference Include="uConsTabelaPreco.pas">
+				<Form>frmConsTabelaPreco</Form>
+			</DCCReference>
+			<DCCReference Include="uConsVendedorVenda.pas">
+				<Form>frmConsVendedorVenda</Form>
+			</DCCReference>
+			<DCCReference Include="uConsClienteVenda.pas">
+				<Form>frmConsClienteVenda</Form>
+			</DCCReference>
+			<DCCReference Include="uLctSaida.pas">
+				<Form>frmLctSaida</Form>
+			</DCCReference>
+			<DCCReference Include="uLctSaidaDetalhamento.pas">
+				<Form>frmLctSaidaDetalhamento</Form>
+			</DCCReference>
+			<DCCReference Include="uLctImplantacaoSaldo.pas">
+				<Form>frmLctImplantacaoSaldo</Form>
+			</DCCReference>
+			<DCCReference Include="uSystemInformation.pas"/>
+			<DCCReference Include="DelphiZXIngQRCode.pas"/>
+			<DCCReference Include="uCadParametros.pas">
+				<Form>frmCadParametros</Form>
+			</DCCReference>
+			<DCCReference Include="uLctPedido.pas">
+				<Form>frmLctPedido</Form>
+			</DCCReference>
+			<DCCReference Include="uLctPedidoDetalhe.pas">
+				<Form>frmLctPedidoDetalhe</Form>
+			</DCCReference>
+			<DCCReference Include="uCadProdutoPedido.pas">
+				<Form>frmCadProdutoPedido</Form>
+			</DCCReference>
+			<DCCReference Include="uConsLctPedido.pas">
+				<Form>frmConsLctPedido</Form>
+			</DCCReference>
+			<DCCReference Include="uImpPedido.pas">
+				<Form>frmImpPedido</Form>
+			</DCCReference>
+			<DCCReference Include="uImpVendas.pas">
+				<Form>frmImpVendas</Form>
+			</DCCReference>
+			<DCCReference Include="uConsGraficoVendas.pas">
+				<Form>frmConsGraficoVendas</Form>
+			</DCCReference>
+			<DCCReference Include="uConsEstoqueProduto.pas">
+				<Form>frmConsEstoqueProduto</Form>
+			</DCCReference>
+			<DCCReference Include="uLctVendaDelivery.pas">
+				<Form>frmLctVendaDelivery</Form>
+			</DCCReference>
+			<DCCReference Include="uSelClienteDelivery.pas">
+				<Form>frmSelClienteDelivery</Form>
+			</DCCReference>
+			<DCCReference Include="uLctVendaDeliveryObservacao.pas">
+				<Form>frmLctVendaDeliveryObservacao</Form>
+			</DCCReference>
+			<DCCReference Include="uFinalizarVendaDelivery.pas">
+				<Form>frmFinalizarVendaDelivery</Form>
+			</DCCReference>
+			<DCCReference Include="uDescontoDelivery.pas">
+				<Form>frmDescontoDelivery</Form>
+			</DCCReference>
+			<DCCReference Include="uAcrescimoDelivery.pas">
+				<Form>frmAcrescimoDelivery</Form>
+			</DCCReference>
+			<DCCReference Include="uQuantidadeDelivery.pas">
+				<Form>frmQuantidadeDelivery</Form>
+			</DCCReference>
+			<DCCReference Include="uConsCliente.pas">
+				<Form>frmConsCliente</Form>
+			</DCCReference>
+			<DCCReference Include="uLctContasPagar.pas">
+				<Form>frmLctContasPagar</Form>
+			</DCCReference>
+			<DCCReference Include="uLctContasReceber.pas">
+				<Form>frmLctContasReceber</Form>
+			</DCCReference>
+			<DCCReference Include="uCadContasPagar.pas">
+				<Form>frmCadContasPagar</Form>
+			</DCCReference>
+			<DCCReference Include="uCadContasReceber.pas">
+				<Form>frmCadContasReceber</Form>
+			</DCCReference>
+			<DCCReference Include="uSelProdutoCodigo.pas">
+				<Form>frmSelProdutoCodigo</Form>
+			</DCCReference>
+			<DCCReference Include="uSelProdutoCodigoVarios.pas">
+				<Form>frmSelProdutoCodigoVarios</Form>
+			</DCCReference>
+			<DCCReference Include="uControleAcesso.pas">
+				<Form>frmControleAcesso</Form>
+			</DCCReference>
+			<DCCReference Include="uConsUsuario.pas">
+				<Form>frmConsUsuario</Form>
+			</DCCReference>
+			<DCCReference Include="uCadAtendimento.pas">
+				<Form>frmCadAtendimento</Form>
+			</DCCReference>
+			<DCCReference Include="uCadAtendimentoItem.pas">
+				<Form>frmCadAtendimentoItem</Form>
+			</DCCReference>
+			<DCCReference Include="uImpAtendimentos.pas">
+				<Form>frmImpAtendimentos</Form>
+			</DCCReference>
+			<DCCReference Include="uConsClienteAtendimento.pas">
+				<Form>frmConsClienteAtendimento</Form>
+			</DCCReference>
+			<DCCReference Include="uCadProfissional.pas">
+				<Form>frmCadProfissional</Form>
+			</DCCReference>
+			<DCCReference Include="uCadHorarioAtendimento.pas">
+				<Form>frmCadHorarioAtendimento</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">AonVendas.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
