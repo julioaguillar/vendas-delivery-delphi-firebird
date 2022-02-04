@@ -1,1 +1,0 @@
-BRCC32 -RC Aon.rc
