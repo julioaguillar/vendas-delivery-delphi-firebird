@@ -5,7 +5,7 @@
 <div align="center" style="font-size: 2.5em">Controle de vendas e Delivery</div>
 
 #
-## Sistema desenvolvido em Delphi com banco de dados Firebird 2.5 
+## Sistema desenvolvido em Delphi com Banco de Dados Firebird 2.5
 
 ### Ferramentas utilizadas para o desenvolvimento
 * Delphi 2010
